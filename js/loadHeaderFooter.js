@@ -1,6 +1,9 @@
 // Function to load HTML content into a specified element
 function loadContent(elementId, content) {
-    document.getElementById(elementId).innerHTML = content;
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.innerHTML = content;
+    }
 }
 
 // Toolbar content
