@@ -15,6 +15,7 @@
 /* Define gradients for specific sections */
 .section1 {
     --gradient: linear-gradient(to bottom, #001f3f, #003566); /* Dark navy to deep blue */
+    margin-top: 15vh;
 }
 
 .section2 {
@@ -148,11 +149,10 @@ p {
         justify-content: center;
         /* Center content */
         height: 90vh;
-        margin: 0;
         overflow: hidden;
         /* Prevent any overflow causing gaps */
-
     }
+    
 
     .content {
         justify-content: center;
