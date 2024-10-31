@@ -1,0 +1,302 @@
+
+/* Plans Section */
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Plan Container */
+.plan-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual Plan Styles */
+.plan {
+    background-color: #ffffff;
+    border: 1px solid #cfcece;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 300px;
+    min-width: 250px;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.plan.popular {
+    border: 2px solid #007bff;
+    background-color: #f0f8ff;
+}
+
+/* Plan Image Styles */
+.plan-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.plan h2 {
+    margin: 0 0 0px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.9rem;
+    color: #430be9;
+    margin: 0 0 15px;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.features li {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Button Styles */
+.select-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-btn:hover {
+    background-color: #0056b3;
+}
+
+.note {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plan-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan {
+        max-width: 90%;
+    }
+
+    .dialog-content {
+        margin-top: 0;
+    }
+}
+
+
+
+/* Dialog styles */
+.dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.dialog-content {
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    margin-top: 10vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close button styling */
+.close-btn {
+    position: fixed; /* Keep it fixed to the viewport */
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    color: #333;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it sits on top of other elements */
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for close button */
+.close-btn:hover {
+    color: #ff4444; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+
+/* Scrollbar styling */
+.dialog-content::-webkit-scrollbar {
+    width: 8px; /* Set scrollbar width */
+}
+
+.dialog-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 10px; /* Rounded corners for track */
+}
+
+.dialog-content::-webkit-scrollbar-thumb {
+    background: #888; /* Scroll thumb color */
+    border-radius: 10px; /* Rounded corners for thumb */
+}
+
+.dialog-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker color on hover */
+}
+
+/* Form styling */
+.dialog-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right; /* For RTL alignment */
+}
+
+/* Label styling */
+.dialog-content label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Input and textarea styling */
+.dialog-content input,
+.dialog-content textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s;
+    text-align: right;
+}
+
+.dialog-content input:focus,
+.dialog-content textarea:focus {
+    border-color: #3a6ee8;
+    outline: none;
+}
+
+/* Textarea resize disable */
+.dialog-content textarea {
+    resize: none;
+}
+
+/* Submit button styling */
+.dialog-content button[type="submit"] {
+    background-color: #3a6ee8;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dialog-content button[type="submit"]:hover {
+    background-color: #2a52c4;
+}
+
+/* Title styling */
+.dialog-content .dialog-title {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Description styling */
+.dialog-content .dialog-description {
+    font-size: 1rem;
+    color: #4e4e4e;
+    text-align: right;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Spinner (select dropdown) styling */
+.dialog-content{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fff;
+    text-align: right;
+}
+
+.dialog-content .plan-spinner option {
+    font-size: 1rem;
+    color: #333;
+}
+
+.plan-spinner {
+    color: green;                 /* Blue text */
+    font-size: 1rem;           /* Adjust font size */
+    border: 2px solid green;     /* Green outline */
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;     /* Keeps the background white */
+}
+
+
+
+.dialog-content .plan-spinner option[data-price]::after {
+    content: attr(data-price);
+    color: #888;
+    font-size: 0.8rem;
+}
+

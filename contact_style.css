@@ -1,0 +1,108 @@
+body{
+    background: linear-gradient(to bottom, #c7d8fe, #ecf1ff);
+}
+main {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the contact section */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Form styling */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-section label {
+    font-size: 0.9rem;
+    color: #555;
+    text-align: right;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s;
+    text-align: right; /* Align text for RTL */
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #3a6ee8;
+    outline: none;
+}
+
+.contact-section textarea {
+    resize: none;
+}
+
+/* Submit button styling */
+.contact-section button[type="submit"] {
+    background-color: #3a6ee8;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section button[type="submit"]:hover {
+    background-color: #2a52c4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-section p {
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin-top: 60px; /* Adjust for smaller header height if needed */
+        height: calc(100vh - 60px);
+    }
+}

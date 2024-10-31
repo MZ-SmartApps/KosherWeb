@@ -1,0 +1,191 @@
+.part {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Reverse row direction for RTL */
+    height: 100vh;
+    padding-left: 10%;
+    /* Swap padding for RTL */
+    padding-right: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: var(--gradient);
+    /* Use variable for background */
+}
+
+/* Define gradients for specific sections */
+.section1 {
+    --gradient: linear-gradient(to bottom, #001f3f, #003566); /* Dark navy to deep blue */
+}
+
+.section2 {
+    --gradient: linear-gradient(to bottom, #003566, #004b4f); /* Deep blue to dark teal */
+}
+
+.section3 {
+    --gradient: linear-gradient(to bottom, #004b4f, #003b30); /* Dark teal to greenish navy */
+}
+
+.section4 {
+    --gradient: linear-gradient(to bottom, #003b30, #00251a); /* Greenish navy to deep green */
+}
+
+
+.section5 {
+    --gradient: linear-gradient(to bottom, #c1ebfe, #c1b4fe); /* Very light blue to pale sky blue */
+}
+
+.section-advertise1 {
+    --gradient: linear-gradient(to bottom, #74aef9, #a9c4ff);
+    /* Example gradient */
+}
+.section-advertise2 {
+    --gradient: linear-gradient(to bottom, #a9c4ff, #beffd3);
+    /* Example gradient */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: right;
+    /* Align text to the right */
+    flex: 1;
+    /* Allow content to take equal space */
+}
+
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+.image {
+    margin-top: 8%;
+    margin-bottom: 1%;
+    flex: 1;
+    /* Allow image to take equal space */
+    display: flex;
+    /* Use flexbox for centering the image */
+    justify-content: center;
+    /* Center image horizontally */
+    align-items: center;
+    /* Center image vertically */
+    opacity: 0;
+    /* Start with the image hidden */
+    transform: translateY(30px);
+    /* Move it down */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    /* Change duration to 1 second */
+}
+
+.image img {
+    max-width: 100%;
+    /* Ensure the image scales correctly */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-height: 100%;
+    /* Ensure the image doesn't overflow */
+}
+
+.image.visible {
+    opacity: 1;
+    /* Fully visible */
+    transform: translateY(0);
+    /* Move to its original position */
+}
+
+h2 {
+    font-family: 'Heebo', Arial, sans-serif;
+    /* Set font family */
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: right;
+    /* Align headings to the right */
+}
+
+p {
+    font-family: 'Heebo', Arial, sans-serif;
+    /* Set font family */
+    font-weight: 300;
+    margin-bottom: 24px;
+    text-align: right;
+    /* Align paragraphs to the right */
+}
+
+.info {
+    text-align: right;
+    /* Centers the text within the div */
+    align-items: center;
+    font-size: 24px;
+    padding-bottom: 10px;
+    /* Sets the font size */
+}
+
+.icon {
+    vertical-align: middle;
+    /* Aligns icons vertically in line with the text */
+    margin: 0 5px;
+    /* Adds space around icons */
+}
+
+.separator {
+    margin: 0 15px;
+    /* Adds more space around the separator */
+}
+
+@media (max-width: 768px) {
+
+    /* Sections responsive */
+    .part {
+        flex-direction: column-reverse;
+        /* Stack elements vertically for RTL */
+        align-items: center;
+        /* Center content */
+        justify-content: center;
+        /* Center content */
+        height: 90vh;
+        margin: 0;
+        overflow: hidden;
+        /* Prevent any overflow causing gaps */
+
+    }
+
+    .content {
+        justify-content: center;
+        /* Center content */
+        align-items: center;
+        /* Center content */
+        text-align: center;
+        padding: 0;
+        margin-top: 12%;
+        flex: none;
+        /* Center text for mobile */
+    }
+
+    .image {
+        height: 60%;
+        /* Fixed height for image on mobile */
+        justify-content: center;
+        /* Center the image */
+        align-items: center;
+        flex: 0;
+        /* Center the image */
+    }
+
+    .image img {
+        height: auto;
+        /* Maintain aspect ratio */
+        max-height: 100%;
+        /* Ensure image doesn't overflow */
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+        /* Align text center for smaller screens */
+    }
+}

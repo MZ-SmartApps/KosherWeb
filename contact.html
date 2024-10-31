@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>צור קשר - KosherWeb</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact_style.css">
+
+    <script src="js/loadHeaderFooter.js" defer></script>
+    <script src="js/contactScript.js" defer></script> <!-- Link to your external script -->
+
+</head>
+
+<body>
+    <div class="toolbar" id="toolbar"></div>
+
+    <main>
+        <section class="contact-section">
+            <h2>צור קשר</h2>
+            <p>אם יש לכם שאלות, בקשות או הצעות, אנא השאירו הודעה ונחזור אליכם בהקדם.</p>
+            <form action="https://formsubmit.co/4c500dec515680269a2b1b8a00683144" method="POST"  onsubmit="handleFormSubmit(event)">
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">אימייל:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="subject">נושא:</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="message">הודעה:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <input type="hidden" name="_next" value="thanks.html">
+
+                <button type="submit">שלח</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>

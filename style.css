@@ -1,0 +1,160 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Heebo', Arial, sans-serif; /* Set font family */
+    line-height: 1.6;
+    color: #333;
+    direction: rtl; /* Set direction to RTL */
+}
+
+header {
+    color: #013454;
+}
+
+/* Tool bar style */
+.toolbar {
+    background-color: #013454; /* Primary color */
+    padding: 10px 0; /* Adjust top and bottom padding */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.toolbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust to your desired max width */
+    margin: 0 auto;
+    padding: 0 30px; /* Add side padding */
+    width: 100%;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.logo {
+    height: 30px; /* Adjust as needed */
+    margin-left: 10px; /* Change to margin-left for RTL */
+}
+
+.toolbar h1 {
+    font-family: 'Heebo', Arial, sans-serif; /* Set font family */
+    font-weight: 600; /* Ensure SemiBold weight */
+    color: white;
+    font-size: 1.25rem; /* Larger font size for a more prominent title */
+    margin: 0;
+    white-space: nowrap; /* Prevents breaking the title into multiple lines */
+}
+
+.btn-container {
+    display: flex;
+    gap: 25px; /* Space between buttons */
+    align-items: center;
+    flex-shrink: 0; /* Prevents shrinking of buttons */
+    justify-content: flex-start; /* Align buttons to the left */
+}
+
+.advertise-btn,
+.contact-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.advertise-btn:hover,
+.contact-btn:hover {
+    text-decoration: underline;
+}
+
+.play-store-btn {
+    display: inline-block; /* Allow block behavior */
+    width: 180px; /* Set a fixed width for the button */
+    height: 65px; /* Set a fixed height for the button */
+    background-image: url('google_play_btn.png'); /* Background image */
+    background-size: cover; /* Use 'cover' to fill the button area (can crop) */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s; /* Smooth scaling on hover */
+}
+
+/* Optional: Add hover effect */
+.play-store-btn:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #004fa3;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px 0; /* Adjust top and bottom padding */
+    }
+
+    .toolbar-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align items to the right for RTL */
+        padding: 0 20px; /* Add side padding */
+        width: 100%; /* Ensure it takes the full width */
+    }
+
+    .logo-title {
+        margin-bottom: 10px; /* Space between title and buttons */
+    }
+
+    .toolbar h1 {
+        font-size: 1.5rem; /* Smaller title size for mobile */
+        white-space: normal; /* Allow title to wrap */
+        margin: 0; /* Remove default margin */
+    }
+
+    .btn-container {
+        width: 100%; /* Full width for buttons */
+        justify-content: flex-start; /* Align buttons to the right */
+        gap: 20px; /* Adjust spacing between buttons */
+        margin-top: 5px; /* Add space between title and buttons */
+    }
+
+    .logo {
+        height: 30px; /* Smaller logo size for mobile */
+    }
+
+    .play-store-btn {
+        /* Make the button responsive */
+        text-align: center; /* Center text in the button */
+    }
+
+   
+}

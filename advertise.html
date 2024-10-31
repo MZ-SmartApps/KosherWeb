@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>לפרסם איתנו - KosherWeb</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home_style.css">
+    <link rel="stylesheet" href="advertise_style.css">
+
+
+    <script src="js/loadHeaderFooter.js" defer></script>
+</head>
+
+<body>
+
+   
+    <div class="toolbar" id="toolbar"></div>
+
+
+<main>
+    <section class="part section-advertise1">
+        <div class="content black-text">
+            <h2>חשיפה ממוקדת לקהל שלך</h2>
+            <p>
+                בדפדפן הכשר שלנו משתמשים אלפי משתמשים מהמגזר הדתי והחרדי, המחפשים עסקים המציעים מוצרים ושירותים שמתאימים לאורח חייהם. הפרסום שלך יגיע בדיוק לאנשים הנכונים, בזמן הנכון.
+            </p>
+        </div>
+        <div class="image">
+            <img src="images/ad_img_downloads.png" alt="Description of Image" />
+        </div>
+    </section>
+
+
+    <section class="part section-advertise2">
+        <div class="content black-text">
+            <h2>משלמים פחות, מקבלים יותר</h2>
+            <p>
+                הפרסום בדפדפן שלנו מאפשר לך להגיע למשתמשים בכל זמן ומקום. עם למעלה מ 50,000 חשיפות בשבוע, המודעות שלך יוכלו להופיע בדיוק ברגע שבו הם מחפשים את השירותים והמוצרים שלך – בבית, בעבודה או בדרכים.
+            </p>
+        </div>
+        <div class="image">
+            <img src="images/ad_img_imp1.png" alt="Description of Image" />
+        </div>
+    </section>
+    <section class="plans">
+        <h1 class="section-title">בחר קמפיין</h1>
+        <div class="plan-container">
+            
+            <div class="plan">
+                <img src="images/ad_img_banner.png" alt="Premium Plan" class="plan-image">
+                <h2>בסיסי</h2>
+                <p class="price">90₪</p>
+                <ul class="features">
+                    <li>✔️ 6,000 חשיפות במודעות באנר</li>
+                    <li>✔️ 1,000 חשיפות במודעות מסך מלא</li>
+                    <li>✔️ אורך הקמפיין כיום*</li>
+
+                </ul>
+                <button class="select-btn">התחל</button>
+            </div>
+
+            <div class="plan popular">
+                <img src="images/ad_img_fs.png" alt="Basic Plan" class="plan-image">
+                <h2>מתקדם</h2>
+                <p class="price">255₪</p>
+                <ul class="features">
+                    <li>✔️ 20,000 חשיפות במודעות באנר</li>
+                    <li>✔️ 3,000 חשיפות במודעות מסך מלא</li>
+                    <li>✔️ אורך הקמפיין כ-3 ימים*</li>
+                </ul>
+                <button class="select-btn">התחל</button>
+            </div>
+
+            <div class="plan">
+                <img src="images/ad_img_combo.png" alt="Pro Plan" class="plan-image">
+                <h2>פרימיום</h2>
+                <p class="price">539₪</p>
+                <ul class="features">
+                    <li>✔️ 50,000 חשיפות במודעות באנר</li>
+                    <li>✔️ 7,000 חשיפות במודעות מסך מלא</li>
+                    <li>✔️ אורך הקמפיין כ-8 ימים*</li>
+                </ul>
+                <button class="select-btn">התחל</button>
+            </div>
+
+        </div>
+
+        <div id="note" class="note">
+            *אורך הקמפיין הוא נתון משוער המבוסס על ביצועי העבר, בפועל הקמפיין יסתיים רק כאשר הוא יגיע ליעדו, כך שלמעשה אורך הקמפיין יכול להיות קצר או ארוך יותר.
+        </div>
+    </section>
+
+</main>
+
+<!-- Dialog HTML -->
+<div id="campaign-dialog" class="dialog">
+    <div class="dialog-content">
+        <span class="close-btn">&times;</span> 
+        <h3 class="dialog-title">איזה כיף שהחלטתם לפרסם איתנו!</h3>
+        <p class="dialog-description">
+            שלחו לנו את הפרטים שלכם, ונציג יצור איתכם קשר בהקדם.
+        </p>
+        <form id="campaign-form">
+            <select id="plan" name="plan" class="plan-spinner">
+                <!-- Options will be dynamically populated in JavaScript -->
+            </select>
+
+            <label for="name">שם:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">מייל:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="details">פרטים נוספים:</label>
+            <textarea id="details" name="details" rows="4"></textarea>
+
+            <button type="submit" class="send-btn">שלח</button>
+        </form>
+    </div>
+</div>
+
+
+<div id="footer"></div>
+
+<script src="js/script.js"></script> 
+<script src="js/advertise_script.js"></script> 
+
+</body>
+
+</html>
