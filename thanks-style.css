@@ -1,0 +1,33 @@
+body{
+    background-color: #b4f9c7; /* Background color */
+}
+main {
+    height: 90vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thank-you-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-image {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #555;
+}
